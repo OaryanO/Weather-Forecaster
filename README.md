@@ -46,22 +46,6 @@ uvicorn main:app --reload
 
 ### 2️⃣ **API Endpoint (POST Request)**
 - **URL:** `/predict/`
-- **Request Format (JSON):**
-```json
-{
-  "temperature": 25,
-  "humidity": 60,
-  "wind_speed": 10,
-  "pressure": 1013,
-  "cloud_cover": 50
-}
-```
-- **Response Format:**
-```json
-{
-  "prediction": "☀️ No Rain Expected",
-  "probability": "30.25%"
-}
 ```
 
 ---
