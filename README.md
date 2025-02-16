@@ -23,9 +23,7 @@ A **Deep Learning-based Weather Forecaster** using **LSTM**, built with **FastAP
 ---
 
 ## 🚀 Installation & Setup
-
 1️⃣ Clone the Repository
-```bash
 git clone https://github.com/your-username/Weather-Forecaster.git
 cd Weather-Forecaster
 
