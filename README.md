@@ -46,9 +46,6 @@ uvicorn main:app --reload
 
 ### 2️⃣ **API Endpoint (POST Request)**
 - **URL:** `/predict/`
-```
-
----
 
 ## 🛠️ Technologies Used
 - **FastAPI** (Backend)
