@@ -66,41 +66,6 @@ uvicorn main:app --reload
 
 ---
 
-## 🚀 Deployment on Render
-
-1️⃣ Create a `requirements.txt` file (if not already present):
-```bash
-pip freeze > requirements.txt
-```
-
-2️⃣ Set up `start.sh` to run the app:
-```bash
-#!/bin/bash
-uvicorn main:app --host 0.0.0.0 --port $PORT
-```
-
-3️⃣ Modify `main.py` (if needed):
-```python
-import os
-port = int(os.environ.get("PORT", 8000))
-```
-
-4️⃣ Push your project to GitHub:
-```bash
-git add .
-git commit -m "Deploy to Render"
-git push origin main
-```
-
-5️⃣ Deploy on **[Render](https://render.com/)**:
-   - Select **New Web Service**.
-   - Connect your GitHub repository.
-   - Choose the **Python** environment.
-   - Set the **Start Command**: `bash start.sh`
-   - Deploy! 🚀
-
----
-
 ## 🛠️ Technologies Used
 - **FastAPI** (Backend)
 - **TensorFlow/Keras** (LSTM Model)
@@ -118,7 +83,7 @@ git push origin main
 ---
 
 ## 📜 License
-This project is **MIT Licensed**. Feel free to use and improve it! 🚀
+This project is built by **Aryan Singh**. Feel free to use and improve it! 🚀
 
 ---
 
