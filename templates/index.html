@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,5 +47,55 @@
             </div>
         {% endif %}
     </div>
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecaster</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        input { margin: 10px; padding: 5px; }
+        button { padding: 10px; background-color: #007BFF; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        .result { margin-top: 20px; font-size: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>Weather Prediction</h2>
+    
+    <form method="post" action="/predict/">
+        <label>Temperature:</label> <input type="text" name="temperature" required><br>
+        <label>Humidity:</label> <input type="text" name="humidity" required><br>
+        <label>Wind Speed:</label> <input type="text" name="wind_speed" required><br>
+        <label>Pressure:</label> <input type="text" name="pressure" required><br>
+        <label>Cloud Cover:</label> <input type="text" name="cloud_cover" required><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+        <div class="result">
+            <h3>Prediction: {{ prediction }}</h3>
+            <h4>Rain Probability: {{ probability }}</h4>
+        </div>
+    {% endif %}
 </body>
 </html>
