@@ -15,8 +15,11 @@ tf.compat.v1.reset_default_graph()  # Instead of tf.reset_default_graph()
 
 from tensorflow.keras.models import load_model
 
-model = load_model("model.h5", safe_mode=False)
+# Ensure compatibility mode
+tf.keras.utils.get_custom_objects().clear()
 
+# Load model safely
+model = load_model("weather_forecaster.h5", compile=False)
 
 # Manually compile the model with metrics
 model.compile(optimizer="adam", loss="mse", metrics=["mae"])
