@@ -65,7 +65,7 @@
 
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -98,4 +98,111 @@
         </div>
     {% endif %}
 </body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #e0f7fa, #80deea);
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            color: #00796b;
+        }
+
+        label {
+            display: block;
+            margin: 0.5rem 0 0.2rem;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #004d40;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #00796b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Rain Prediction</h2>
+        <form method="post" action="/predict/">
+            <label>Temperature:</label>
+            <input type="text" name="temperature" required>
+
+            <label>Humidity:</label>
+            <input type="text" name="humidity" required>
+
+            <label>Wind Speed:</label>
+            <input type="text" name="wind_speed" required>
+
+            <label>Pressure:</label>
+            <input type="text" name="pressure" required>
+
+            <label>Cloud Cover:</label>
+            <input type="text" name="cloud_cover" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <h3>Prediction: {{ prediction }}</h3>
+            <h4>Rain Probability: {{ probability }}</h4>
+            <!-- <p>{{ explanation }}</p> -->
+        </div>
+        {% endif %}
+    </div>
+</body>
+
 </html>
