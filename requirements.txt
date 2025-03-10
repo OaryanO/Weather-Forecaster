@@ -2,3 +2,4 @@ tensorflow==2.15
 streamlit
 numpy
 joblib==1.4.2
+sklearn
